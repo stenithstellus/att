@@ -1,0 +1,36 @@
+
+    <div class="card-body">
+
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Names</th>
+                    <th>Date</th>
+                    <th>Entry Time</th>
+                    <th>Exit Time</th>
+                    <th>Late </th>
+                    <th>Leaves</th>
+                    
+                   
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let att of attend">
+                    
+                    <td>{{ att.employee.emp_name }}</td>
+                    <td>{{att.date}}</td>
+                    <td>{{ att.entry_time }}</td>
+                    <td>{{ att.exit_time }}</td>
+                    <td>{{  att.late }}</td>
+                    <td>{{ att.leave_days}}</td>
+                
+                   &nbsp;&nbsp;&nbsp;
+
+                    
+                    <button class="btn btn-info">Back</button>&nbsp;&nbsp;&nbsp;
+                    <button class="btn btn-info" (click)="exit(att.attendanceId)">Exit Time</button>&nbsp;&nbsp;&nbsp;<br>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
